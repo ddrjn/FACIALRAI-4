@@ -1,0 +1,7 @@
+*.pt
+finaltest.csv
+val.csv
+datasets/*/finaltest/
+datasets/*/train/
+datasets/*/val/
+datasets/IAMD/
