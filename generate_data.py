@@ -25,8 +25,8 @@ class Generate_data():
         """
         csv_path = self.data_path +"/"+ 'test.csv'
         test = pd.read_csv(csv_path)
-        validation_data = pd.DataFrame(test.iloc[:int((test.size)/8),:].append(test.iloc[int((test.size)/8*2):int((test.size)/8*3),:]).append(test.iloc[int((test.size)/8*4):int((test.size)/8*5),:]).append(test.iloc[int((test.size)/8*6):int((test.size)/8*7),:]))
-        test_data = pd.DataFrame(test.iloc[int((test.size)/8):int((test.size)/8*2),:].append(test.iloc[int((test.size)/8*3):int((test.size)/8*4),:]).append(test.iloc[int((test.size)/8*5):int((test.size)/8*6),:]).append(test.iloc[int((test.size)/8*7):,:]))
+        validation_data = pd.DataFrame(test.iloc[:int((test.size)/24),:].append(test.iloc[int((test.size)/24*2):int((test.size)/24*3),:]).append(test.iloc[int((test.size)/24*4):int((test.size)/24*5),:]).append(test.iloc[int((test.size)/24*6):int((test.size)/24*7),:]))
+        test_data = pd.DataFrame(test.iloc[int((test.size)/24):int((test.size)/24*2),:].append(test.iloc[int((test.size)/24*3):int((test.size)/24*4),:]).append(test.iloc[int((test.size)/24*5):int((test.size)/24*6),:]).append(test.iloc[int((test.size)/24*7):,:]))
         test_data.to_csv(self.data_path+"/"+test_filename+".csv")
         validation_data.to_csv(self.data_path+"/"+val_filename+".csv")
         print("Done splitting the test file into validation & final test file")
